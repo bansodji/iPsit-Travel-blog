@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+
+    <!--Bootstrap Icon-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!--Owl Carousel-->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <script src="js/owl.carousel.min.js"></script>
+
+    <!--Animate CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!--AOS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!--Local-->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+
+    <title>iPsit | Travelling Blog</title>
+</head>
+
+<body onload="preloader_fun()">
+
+    <!--========Preloader========-->
+    <div id="loading" class="container-fluid">
+        <div class="d-flex justify-content-center align-items-center" style="width: inherit; height: inherit;">
+            <div class="spinner-border f-color" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <!--========Mobile Menu========-->
+    <div class="d-flex justify-content-center">
+        <div class="black" style="z-index: 98;">
+            <i class="bi bi-x-lg fff"></i>
+        </div>
+        <div class="mobile-menu" style="z-index: 99;">
+            <ul>
+                <li class="nav-item my-3">
+                    <a class="heading fw-bold text-dark f-hover close" href="#">Home</a>
+                </li>
+                <li class="nav-item my-3">
+                    <a class="heading fw-bold text-dark f-hover close" href="#">Demos</a>
+                </li>
+                <li class="nav-item my-3">
+                    <a class="heading fw-bold text-dark f-hover close" href="#">Blog</a>
+                </li>
+                <li class="nav-item my-3">
+                    <a class="heading fw-bold text-dark f-hover close" href="#">About</a>
+                </li>
+                <li class="nav-item my-3">
+                    <a class="heading fw-bold text-dark f-hover close" href="#">Services</a>
+                </li>
+                <li class="nav-item my-3">
+                    <a class="heading fw-bold text-dark f-hover close" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--========Navbar========-->
+    <nav class="navbar navbar-expand-lg" style="width: 100%; z-index: 90;">
+        <div class="container-fluid">
+            <a href="#" id="nav-brand" class="navbar-brand fs-2 brand text-dark my-2">iPsit</a>
+            <i class="bi bi-list fs-4"></i>
+            <div class="menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-4">
+                        <a class="nav-link heading fw-bold f-hover text-dark" href="#">Home</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link heading fw-bold f-hover text-dark" href="#">Demos</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link heading fw-bold f-hover text-dark" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link heading fw-bold f-hover text-dark" href="#">About</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link heading fw-bold f-hover text-dark" href="#">Services</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link heading fw-bold f-hover text-dark" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item mx-4 d-flex align-items-center menu-search">
+                        <div class="search-box">
+                            <input class="search-txt" type="text" placeholder="Search">
+                            <a href="#" class="bi bi-search text-dark"></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--========Hero========-->
+    <section>
+        <div class="hero">
+            <div class="container-fluid" style="padding-left: 0; padding-right: 0;">
+
+                <div class="owl-carousel owl-theme">
+
+                    <div class="item screen-size d-flex justify-content-center align-items-center"
+                        style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/bg1.jpeg'); background-position: center; background-size: cover;">
+                        <div data-aos="fade-up">
+                            <h1 class="fff font-X text-center fw-bold car-text">Exploration</h1>
+                            <h3 class="fff heading-2 text-center my-5 mx-4">The world is a book and those who do not
+                                travel read
+                                only one page</h3>
+                        </div>
+                    </div>
+
+                    <div class="item screen-size d-flex justify-content-center align-items-center"
+                        style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/bg2.jpeg'); background-position: center; background-size: cover;">
+                        <div data-aos="fade-up">
+                            <h1 class="fff font-X text-center fw-bold car-text">Expression</h1>
+                            <h3 class="fff heading-2 text-center my-5 mx-4">Travel doesn’t become adventure until you
+                                leave yourself behind</h3>
+                        </div>
+                    </div>
+
+                    <div class="item screen-size d-flex justify-content-center align-items-center"
+                        style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/bg3.jpeg'); background-position: center; background-size: cover;">
+                        <div data-aos="fade-up">
+                            <h1 class="fff font-X text-center fw-bold car-text">Exposition</h1>
+                            <h3 class="fff heading-2 text-center my-5 mx-4">Life is either a daring adventure or nothing
+                                at all</h3>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--========About========-->
+    <section>
+        <div class="container mt-5 py-5">
+            <div class="row gx-5">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div data-aos="fade-up">
+                        <img src="img/about/about1.jpeg" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div data-aos="fade-up">
+                        <img src="img/about/about2.jpeg" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex justify-content-center align-items-center md-margin">
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <div data-aos="fade-up">
+                            <h3 class="heading-2 text-center">Creativity Has No</h3>
+                            <h1 class="text-center">Boundries</h1>
+                        </div>
+                        <div data-aos="fade-up">
+                            <p class="text-center my-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                nonummy nibh
+                                euismod.tation ullamcorper suscipit lobortis nisldolore eu feugiat nulla facilisis at vero
+                                eros et accumsan suscipit lobortis nisldolore eu feugiat nulla facilisis at vero
+                                eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue
+                                duis dolore te feugait nulla facilisi.</p>
+                        </div>
+                        <div data-aos="fade-up">
+                            <a href="#"><button class="f-btn-0">READ MORE</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--========Testmonial========-->
+    <section class="py-5 mt-5"
+        style="background: linear-gradient(#00458b94,#00458b94), url('img/testmony.webp'); background-size: cover; background-position: center; background-attachment: fixed;">
+        <div class="container mt-5 py-5">
+            <div class="owl-carousel owl-theme">
+
+                <div class="item fff d-flex justify-content-center">
+                    <div class="mx-5 d-flex flex-column justify-content-center align-items-center" data-aos="fade-up">
+                        <h2 class="fw-bold test-head">TESTMONIAL</h2>
+                        <h4 class="fff heading-2 text-center my-5">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Odit, aperiam? Error asperiores esse
+                            repellendus velit beatae quam aut ullam!</h4>
+                    </div>
+                </div>
+
+                <div class="item fff d-flex justify-content-center">
+                    <div class="mx-5 d-flex flex-column justify-content-center align-items-center">
+                        <h2 class="fw-bold test-head">TESTMONIAL</h2>
+                        <h4 class="fff heading-2 text-center my-5">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Odit, aperiam? Error asperiores esse
+                            repellendus velit beatae quam aut ullam!</h4>
+                    </div>
+                </div>
+
+                <div class="item fff d-flex justify-content-center">
+                    <div class="mx-5 d-flex flex-column justify-content-center align-items-center">
+                        <h2 class="fw-bold test-head">TESTMONIAL</h2>
+                        <h4 class="fff heading-2 text-center my-5">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Odit, aperiam? Error asperiores esse
+                            repellendus velit beatae quam aut ullam!</h4>
+                    </div>
+                </div>
+
+                <div class="item fff d-flex justify-content-center">
+                    <div class="mx-5 d-flex flex-column justify-content-center align-items-center">
+                        <h2 class="fw-bold test-head">TESTMONIAL</h2>
+                        <h4 class="fff heading-2 text-center my-5">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Odit, aperiam? Error asperiores esse
+                            repellendus velit beatae quam aut ullam!</h4>
+                    </div>
+                </div>
+
+                <div class="item fff d-flex justify-content-center">
+                    <div class="mx-5 d-flex flex-column justify-content-center align-items-center">
+                        <h2 class="fw-bold test-head">TESTMONIAL</h2>
+                        <h4 class="fff heading-2 text-center my-5">Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Odit, aperiam? Error asperiores esse
+                            repellendus velit beatae quam aut ullam!</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--========TRAVELOGUE========-->
+    <section>
+        <div class="container mt-5 py-4">
+            <div class="text-center" data-aos="fade-up">
+                <h2 class="heading-2">Memories & Experiences</h2>
+                <h1>My Travelogue</h1>
+            </div>
+            <div class="row mt-5 pt-5">
+                <div class="col-lg-3 col-md-6 d-flex justify-content-center align-items-center mb-4" data-aos="fade-up">
+                    <div class="" style="width: 18rem;">
+                        <img src="img/vlog/vlog1.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h6 class="fw-bold text-center heading">History of Brooklyn</h6>
+                            <p class="mt-4 text-center">Lorem ipsum, dolor sit amet conse ctetur adi pisi cing elit.
+                                Perfer endis, maiores
+                                recusandae.</p>
+                        </div>
+                        <div class="d-flex justify-content-between my-2 mx-4">
+                            <span class="f-grey fw-bold font-sm">06 MARCH</span>
+                            <span class="f-grey fw-bold font-sm">IN LANDSCAPE - NATURE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 d-flex justify-content-center align-items-center mb-4" data-aos="fade-up">
+                    <div class="" style="width: 18rem;">
+                        <img src="img/vlog/vlog2.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h6 class="fw-bold text-center heading">Penang Street Food</h6>
+                            <p class="mt-4 text-center">Lorem ipsum, dolor sit amet conse ctetur adi pisi cing elit.
+                                Perfer endis, maiores
+                                recusandae.</p>
+                        </div>
+                        <div class="d-flex justify-content-between my-2 mx-4">
+                            <span class="f-grey fw-bold font-sm">06 MARCH</span>
+                            <span class="f-grey fw-bold font-sm">IN LANDSCAPE - NATURE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 d-flex justify-content-center align-items-center mb-4" data-aos="fade-up">
+                    <div class="" style="width: 18rem;">
+                        <img src="img/vlog/vlog3.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h6 class="fw-bold text-center heading">View of Moraine</h6>
+                            <p class="mt-4 text-center">Lorem ipsum, dolor sit amet conse ctetur adi pisi cing elit.
+                                Perfer endis, maiores
+                                recusandae.</p>
+                        </div>
+                        <div class="d-flex justify-content-between my-2 mx-4">
+                            <span class="f-grey fw-bold font-sm">06 MARCH</span>
+                            <span class="f-grey fw-bold font-sm">IN LANDSCAPE - NATURE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 d-flex justify-content-center align-items-center mb-4" data-aos="fade-up">
+                    <div class="" style="width: 18rem;">
+                        <img src="img/vlog/vlog4.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h6 class="fw-bold text-center heading">The Mist of Madagascar</h6>
+                            <p class="mt-4 text-center">Lorem ipsum, dolor sit amet conse ctetur adi pisi cing elit.
+                                Perfer endis, maiores
+                                recusandae.</p>
+                        </div>
+                        <div class="d-flex justify-content-between my-2 mx-4">
+                            <span class="f-grey fw-bold font-sm">06 MARCH</span>
+                            <span class="f-grey fw-bold font-sm">IN LANDSCAPE - NATURE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--========Gallery========-->
+    <section>
+        <div class="container-fluid mt-5" style="padding-left: 0;padding-right: 0;">
+            <div class="row gx-0">
+                <div class="col-lg-3 col-md-6 col-sm-6" data-aos="fade-up">
+                    <div style="width: 100%; height: 100%; position: relative;">
+                        <div class="box">
+                            <img src="img/gallery/gallery1.jpeg" class="img-fluid" alt="">
+                        </div>
+                        <div class="box-overlay d-flex justify-content-center align-items-center">
+                            <div>
+                                <h5 class="fw-bold gallery-head text-center heading">PHOTOS FROM BERLYN</h5>
+                                <h6 class="heading-2 fff mt-5 text-center font-md">abstract / documentary</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6" data-aos="fade-up">
+                    <div style="width: 100%; height: 100%; position: relative;">
+                        <div class="box">
+                            <img src="img/gallery/gallery2.jpeg" class="img-fluid" alt="">
+                        </div>
+                        <div class="box-overlay d-flex justify-content-center align-items-center">
+                            <div>
+                                <h5 class="fw-bold gallery-head text-center heading">AMSTERDAM STROLL</h5>
+                                <h6 class="heading-2 fff mt-5 text-center font-md">abstract / documentary</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6" data-aos="fade-up">
+                    <div style="width: 100%; height: 100%; position: relative;">
+                        <div class="box">
+                            <img src="img/gallery/gallery3.jpeg" class="img-fluid" alt="">
+                        </div>
+                        <div class="box-overlay d-flex justify-content-center align-items-center">
+                            <div>
+                                <h5 class="fw-bold gallery-head text-center heading">GRAFTI ART</h5>
+                                <h6 class="heading-2 fff mt-5 text-center font-md">abstract / documentary</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6" data-aos="fade-up">
+                    <div style="width: 100%; height: 100%; position: relative;">
+                        <div class="box">
+                            <img src="img/gallery/gallery4.jpeg" class="img-fluid" alt="">
+                        </div>
+                        <div class="box-overlay d-flex justify-content-center align-items-center">
+                            <div>
+                                <h5 class="fw-bold gallery-head text-center heading">CATACOMB COLLECTION</h5>
+                                <h6 class="heading-2 fff mt-5 text-center font-md">abstract / documentary</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--========Our Team========-->
+    <section>
+        <div class="container my-5 py-5">
+            <div>
+                <div data-aos="fade-up">
+                    <h1 class="text-center">Our Team</h1>
+                    <h5 class="text-center heading my-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo
+                        iste fugiat officiis quam eaque cum, delectus nihil et in sit?</h5>
+                </div>
+                <div class="row mt-5">
+
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-4 d-flex justify-content-center" data-aos="fade-up">
+                        <div class="" style="width: 18rem;">
+                            <img src="img/team/team-1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between my-3">
+                                    <span class="fw-bold heading">Emelia Clarke</span>
+                                    <span class="f-grey fw-bold font-xs space">PHOTOGRAPHER</span>
+                                </div>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                    nonummy nibh euismod tation ullamcor suscipit lobortis.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-4 d-flex justify-content-center" data-aos="fade-up">
+                        <div class="" style="width: 18rem;">
+                            <img src="img/team/team-2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between my-3">
+                                    <span class="fw-bold heading">Louise Blake</span>
+                                    <span class="f-grey fw-bold font-xs space">DESIGNER</span>
+                                </div>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                    nonummy nibh euismod tation ullamcor suscipit lobortis.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-4 d-flex justify-content-center" data-aos="fade-up">
+                        <div class="" style="width: 18rem;">
+                            <img src="img/team/team-3.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between my-3">
+                                    <span class="fw-bold heading">Diana Ferguisen</span>
+                                    <span class="f-grey fw-bold font-xs space">STYLIST</span>
+                                </div>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                    nonummy nibh euismod tation ullamcor suscipit lobortis.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-4 d-flex justify-content-center" data-aos="fade-up">
+                        <div class="" style="width: 18rem;">
+                            <img src="img/team/team-4.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between my-3">
+                                    <span class="fw-bold heading">Ivar Lothbroke</span>
+                                    <span class="f-grey fw-bold font-xs space">MANAGER</span>
+                                </div>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                    nonummy nibh euismod tation ullamcor suscipit lobortis.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--========Footer========-->
+    <footer class="mt-5 py-5 f-bg-black">
+        <div class="container py-5" style="border-bottom: 1px solid #808080;">
+            <div class="row gx-5">
+
+                <div class="col-lg-3 col-md-12 col-sm-12 mb-5" data-aos="fade-up">
+                    <div>
+                        <h6 class="fff fw-bold mb-4 space heading">ABOUT US</h6>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.
+                            Ullamcorper suscipit lobortis nisldolore eu feugiat nulla... </p>
+                        <div class="mt-4">
+                            <i class="bi bi-facebook fff me-4"></i>
+                            <i class="bi bi-instagram fff me-4"></i>
+                            <i class="bi bi-twitter fff me-4"></i>
+                            <i class="bi bi-linkedin fff me-4"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4" data-aos="fade-up">
+                    <div>
+                        <h6 class="fff fw-bold mb-4 space heading">LATEST PROJECT</h6>
+                        <ul class="footer-list">
+                            <li class="mb-2">
+                                <a href="#" class="font-xs f-grey fw-bold">PHOTOS FROM BERLYN</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="font-xs f-grey fw-bold">PHOTOS FROM PHILLIPINS</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="font-xs f-grey fw-bold">AMAZONION RAFTING</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="font-xs f-grey fw-bold">BUSY STREET OF NIKARAGUA</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="font-xs f-grey fw-bold">THE GRAND CANYON EXPERIENCE</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4" data-aos="fade-up">
+                    <div>
+                        <h6 class="fff fw-bold mb-4 space heading">RECENT POST</h6>
+                        <ul class="footer-list">
+                            <li class="mb-2">
+                                <a href="#" class="font-xs f-grey fw-bold">HISTORY OF BROOKLYN</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="font-xs f-grey fw-bold">PENANG STREET FOOD</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="font-xs f-grey fw-bold">THE MIST OF MADAGASCAR</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="font-xs f-grey fw-bold">MOROCCO ROAD TRIP</a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="font-xs f-grey fw-bold">THE NOISE - ELIXIR</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-12 col-sm-12 mb-4" data-aos="fade-up">
+                    <h6 class="fff fw-bold mb-4 space heading">MY GALLERY</h6>
+                    <div class="row g-2">
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <img src="img/gallery/gallery1.jpeg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <img src="img/gallery/gallery2.jpeg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <img src="img/gallery/gallery3.jpeg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <img src="img/gallery/gallery4.jpeg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <img src="img/gallery/gallery5.jpeg" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <img src="img/gallery/gallery6.jpeg" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <div class="d-flex justify-content-center">
+                <span class="font-xs fff space fw-bold text-center">© iPsit - Travelling Blog, All Rights
+                    Reserved</span>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!--========Preloader========-->
+    <script>
+        var preloader = document.getElementById('loading');
+
+        function preloader_fun() {
+            preloader.style.display = 'none';
+        }
+    </script>
+
+    <!--========AOS========-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            delay: 500,
+            once: true
+        });
+    </script>
+
+</body>
+
+</html>
